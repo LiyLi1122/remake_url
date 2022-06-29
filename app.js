@@ -2,7 +2,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
-const port = process.env.port
+const port = process.env.PORT || 3000
 
 //set mongoDB
 require('dotenv').config()
@@ -17,9 +17,16 @@ const app = express()
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
+//set application-level middleware
+app.use(express.static('public'))
+
 //set routes
 app.get('/', (req, res) => {
   res.render('index')
+})
+
+app.post('/remakeUrls', (req, res) => {
+  res.render('show')
 })
 
 //listen server

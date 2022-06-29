@@ -1,0 +1,82 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 70vw;
+  text-align: center;
+  margin:0 auto;
+  padding-top: 20px;
+  border: 1px solid #000;
+}
+
+img {
+  width: 20%;
+  margin: 20px 0
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(188, 185, 185);
+  opacity: 1;
+  /* Firefox */
+}
+
+#search-form {
+  display: flex; 
+  flex-flow: column nowrap; 
+  align-items: center; 
+  margin-top: 60px
+}
+
+#search-input {
+  background: rgba(195, 194, 194, 0.3);
+  width: 35%; 
+  padding: 10px; 
+  margin-bottom: 16px;
+  font-size: 1.2em; 
+  font-weight: 500;
+  border: none; 
+}
+
+#search-btn {
+  width: 20%; 
+  padding: 10px; 
+  border: 1px solid #1E90FF;
+  background: #FFF; 
+  color: #1E90FF; 
+  font-size: 1.2em; 
+  font-weight: 600;
+}
+
+#copy-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 60px
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+#copy-input {
+  background: rgba(195, 194, 194, 0.3);
+  width: 35%; 
+  padding: 10px; 
+  margin-bottom: 16px;
+  font-size: 1.2em; 
+  font-weight: 500;
+  /* border: none;  */
+}
+
+
+#copy-btn {
+  width: 10%;
+  padding: 10px;
+  border: none;
+  background: #1E90FF;
+  color: #FFF;
+  font-size: 1.2em;
+  font-weight: 600;
+}
