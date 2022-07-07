@@ -30,4 +30,4 @@ step7. npm run dev
 step8. open your browser with the URL http://localhost:3000
 
 ## Authors
-[Lily Wang]: 
+<a href="https://github.com/LiyLi1122" target="_blank">Lily Wang</a>
