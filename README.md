@@ -6,9 +6,9 @@ An awesome web application provide you a service to shorten long url you won't s
 
 |Funtions|Detail|Method|URL|
 |---|---|---|---|
-|  View homepage of Remake Url site |   |  GET | / |
-|  Create shorten URL |   |  POST | /remakeUrls  |
-|  Connect shorten URL |   |  GET |/remakeUrls/:url  |
+|  View homepage of Remake Url site | Users can key url in the field on the website. |  GET | / |
+|  Create shorten URL | After keying URL and submitting, the form will send to this route. |  POST | /remakeUrls  |
+|  Connect shorten URL | Users will get a shorten URL. If clicking the hyper link will redirect to target website.|  GET |/remakeUrls/:url  |
 
 ### Installation
 The following instructions will get you a copy of this project.
