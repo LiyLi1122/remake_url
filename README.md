@@ -10,7 +10,7 @@ An awesome web application provide you a service to shorten long url you won't s
 |  Create shorten URL |   |  POST | /remakeUrls  |
 |  Connect shorten URL |   |  GET |/remakeUrls/:url  |
 
-## Installation
+### Installation
 The following instructions will get you a copy of this project.
 
 step1. Clone https://github.com/LiyLi1122/remake_url.git
