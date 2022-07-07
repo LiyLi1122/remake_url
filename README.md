@@ -28,3 +28,6 @@ step6. key your mongoDB password in .env
 step7. npm run dev
 
 step8. open your browser with the URL http://localhost:3000
+
+## Authors
+[Lily Wang]: 
