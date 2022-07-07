@@ -1,4 +1,5 @@
 # Remake Url site
+<img src="https://github.com/LiyLi1122/remake_url/blob/main/remake%20url%20.png">
 An awesome web application provide you a service to shorten long url you won't see annoying long-winded url anymore.
 
 ## Project 
