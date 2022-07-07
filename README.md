@@ -12,10 +12,19 @@ An awesome web application provide you a service to shorten long url you won't s
 
 ## Installation
 The following instructions will get you a copy of this project.
-step1. Clone  
 
-step2.
+step1. Clone https://github.com/LiyLi1122/remake_url.git
 
-step3.
+step2. Open terminal
 
-step4. 
+step3. cd remake_url
+
+step4. npm install
+
+step5. touch .env
+
+step6. key your mongoDB password in .env
+
+step7. npm run dev
+
+step8. open your browser with the URL http://localhost:3000
