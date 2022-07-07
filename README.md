@@ -12,7 +12,10 @@ An awesome web application provide you a service to shorten long url you won't s
 
 ## Installation
 The following instructions will get you a copy of this project.
-step1. 
+step1. Clone  
+
 step2.
-step3. 
+
+step3.
+
 step4. 
