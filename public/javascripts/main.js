@@ -1,5 +1,7 @@
 const input = document.querySelector('input')
 const form = document.querySelector('form')
+const copyButton = document.getElementById('copy-btn')
+const copyText = document.getElementById('copy-link').innerHTML
 
 if (form) {
   form.addEventListener('submit', (event) => {
@@ -13,6 +15,14 @@ if (form) {
   })
 }
 
+if (copyButton) {
+  copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(copyText).then(() => {
+      console.log(copyText)
+      alert('copied')
+  })
+  })
+}
 
 
 

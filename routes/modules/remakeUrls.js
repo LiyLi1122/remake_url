@@ -12,13 +12,13 @@ router.post('/', (req, res) => {
   
   Url.find({ url_link: { $regex: reg } })
     .lean()
-    .then(result => {       //[{}, {}]
-      //no exist
+    .then(result => {       
+      //no exist -> []
       if (!result.length) { 
         Url.create({ url_link, shorten_link })
           .then(() => res.render('show', { shorten_link }))
           .catch(error => console.log(error))
-      //exist
+      //exist -> [{key: value}]
       } else {              
         res.render('show', { shorten_link: result[0].shorten_link })
       }
