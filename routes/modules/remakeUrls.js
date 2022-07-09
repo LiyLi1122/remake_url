@@ -5,35 +5,39 @@ const Url = require('../../models/url.js')
 
 //make shorten-url
 router.post('/', (req, res) => {
+  const url_link = req.body.url_link.split(',')
   const base = 'http://localhost:3000/remakeUrls'
-  const url_link = req.body.url_link
-  const reg = new RegExp(url_link)
-  const shorten_link = base + `/${make_mixed_string()}`
+  const check_case = make_mixed_string()
+  const shorten_link = base + `/${check_case}`
+  const original_link = url_link[0]
+  const check_str = url_link[2]
   
-  Url.find({ url_link: { $regex: reg } })
+  Url.findOne({check_str})
     .lean()
-    .then(result => {       
-      //no exist -> []
-      if (!result.length) { 
-        Url.create({ url_link, shorten_link })
+    .then(result => {
+      //no exist -> null
+      if (!result) {
+        Url.create({ original_link, shorten_link, check_str, check_case})
           .then(() => res.render('show', { shorten_link }))
           .catch(error => console.log(error))
-      //exist -> [{key: value}]
-      } else {              
-        res.render('show', { shorten_link: result[0].shorten_link })
+      //exist -> {key: value}
+      } else {     
+        console.log(result)         
+        res.render('show', { shorten_link: result.shorten_link })
       }
     })
     .catch(error => console.log(error))
+  
 })
 
 //get original link
 router.get('/:url', (req, res) => {
   const searchWords = req.params.url
-  const reg = new RegExp(searchWords)
 
-  Url.find({ shorten_link: { $regex: reg } })
+  Url.findOne({ check_case: searchWords })
     .lean()
-    .then(result => res.redirect(result[0].url_link))
+    .then(result => {
+      res.redirect(result.original_link)})
     .catch(error => console.log(error))
 })
 

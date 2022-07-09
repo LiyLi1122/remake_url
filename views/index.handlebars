@@ -1,7 +1,8 @@
 <div>
   <form action="/remakeUrls" method="POST" id="search-form">
     <span style="text-start">格式為 http:// 或 https://</span>
-    <input type="text" placeholder="Input URI here" id="search-input" name="url_link">
+    <input type="text" placeholder="Input URI here" id="search-input">
+    <input type="text" id="url-link" name="url_link" hidden>
     <button type="submit" id="search-btn">Shorten</button>
   </form>
 </div>
