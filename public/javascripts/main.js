@@ -6,7 +6,7 @@ const copyText = document.getElementById('copy-link')
 
 if (form) {
   form.addEventListener('submit', (event) => {
-    const re = new RegExp('^(http:\\/\\/|https:\\/\\/)(.*)', 'i')
+    const re = new RegExp('^(http:\\/\\/|https:\\/\\/)(.+)', 'i')
     const str = input.value
     if (!re.test(str)) {
       event.preventDefault()

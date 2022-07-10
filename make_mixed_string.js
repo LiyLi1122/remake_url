@@ -1,8 +1,7 @@
 function make_mixed_string() {
-  const upperCases = "ABCDEFGHIJKLMNOPQRSTUV"
-  const lowerCases = "abcdefghijklmnopqrstuvwxyz"
-  const number = "0123456789";
-  const str = [...(upperCases + lowerCases + number)]
+  //upperCases + lowerCases + number
+  const cases = "ABCDEFGHIJKLMNOPQRSTUVabcdefghijklmnopqrstuvwxyz0123456789"
+  const str = [...(cases)]
   
   //shuffle algorithm
   const index = str.length - 1;
